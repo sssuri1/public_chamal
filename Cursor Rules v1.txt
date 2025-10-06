@@ -1,0 +1,226 @@
+# Cursor Rules
+
+## Project Overview
+This is an AI-powered platform with FastAPI backend, React frontend, and multi-agent orchestration system. The platform handles <whatever m8>.
+
+## Technology Stack
+- **Backend**: FastAPI (Python 3.9+), SQLAlchemy, Pydantic, Celery with Redis
+- **Frontend**: React 19, TypeScript, Tailwind CSS, Material-UI, Radix UI
+- **Database**: SQLite (dev), PostgreSQL (prod), Redis for caching
+- **AI/ML**: Custom agent orchestration system
+- **Authentication**: JWT with bcrypt, OAuth2, SSO integration
+- **Background Tasks**: Celery with Redis and Flower monitoring
+- **Infrastructure**: Docker, Kubernetes, AWS/GCP/Azure
+- **Monitoring**: Prometheus, Grafana, ELK Stack, Sentry
+- **CDN**: CloudFront/Akamai for static assets
+- **Load Balancing**: Nginx, AWS ALB/ELB
+- **Message Queue**: Redis, RabbitMQ, Apache Kafka
+- **Search**: Elasticsearch, Algolia
+- **File Storage**: AWS S3, Google Cloud Storage
+- **Email**: SendGrid, AWS SES
+- **SMS**: Twilio, AWS SNS
+- **Payment**: Stripe, PayPal, Square
+- **Analytics**: Google Analytics, Mixpanel, Amplitude
+- **A/B Testing**: Optimizely, VWO
+- **Feature Flags**: LaunchDarkly, ConfigCat
+
+## Modular Rule Structure
+
+This project uses a modular approach to Cursor Rules. See the following files for detailed guidelines:
+
+### Core Development Rules
+- `rules/core/` - Basic development patterns and conventions
+- `rules/backend/` - Backend-specific patterns and practices
+- `rules/frontend/` - Frontend-specific patterns and practices
+
+### Architecture & Infrastructure
+- `rules/architecture/` - SaaS architecture patterns and scalability
+- `rules/infrastructure/` - DevOps, deployment, and infrastructure
+- `rules/performance/` - Performance optimization and monitoring
+
+### Security & Compliance
+- `rules/security/` - Security best practices and authentication
+- `rules/compliance/` - ISO 27001, SOC 2, GDPR compliance
+- `rules/data-handling/` - Data classification, retention, and privacy
+
+### Quality & Testing
+- `rules/testing/` - Testing strategies and quality assurance
+- `rules/code-quality/` - Linting, formatting, and code review
+- `rules/documentation/` - Documentation standards and practices
+
+### Business Logic
+- `rules/ai-agents/` - AI agent orchestration and patterns
+- `rules/background-tasks/` - Background processing and task management
+
+## Quick Reference
+
+### Essential Commands
+```bash
+# Development
+npm run dev                    # Start full development environment
+npm run test                   # Run all tests
+npm run lint                   # Lint all code
+npm run format                 # Format all code
+
+# Database
+npm run db:migrate            # Run database migrations
+npm run db:seed               # Seed demo data
+
+# Infrastructure
+npm run docker:up             # Start Docker services
+npm run k8s:deploy            # Deploy to Kubernetes
+```
+
+### Key Patterns
+- **Multi-tenancy**: Tenant isolation with database schemas
+- **AI Agent System**: Modular agent orchestration
+- **Compliance**: ISO 27001, SOC 2, GDPR compliance
+- **Security**: JWT, MFA, audit logging, data encryption
+- **Performance**: Caching, CDN, load balancing, monitoring
+
+### File Organization
+```
+backend/
+├── main.py                   # FastAPI app entry point
+├── models.py                # Pydantic data models
+├── agent_orchestrator.py    # AI agent orchestration
+├── auth.py                  # Authentication and authorization
+├── background_tasks/        # Celery background tasks
+├── middleware/              # Custom middleware
+├── services/               # Business logic services
+├── api/                    # API route handlers
+└── tests/                  # Test suite
+
+frontend/src/
+├── components/             # Reusable UI components
+├── pages/                 # Page components
+├── services/              # API service layer
+├── types/                 # TypeScript type definitions
+└── utils/                 # Utility functions
+```
+
+## Development Workflow
+
+### Local Development
+1. Start backend: `cd backend && python main.py`
+2. Start frontend: `cd frontend && npm run dev`
+3. Start Redis: `redis-server`
+4. Start Celery: `cd backend && celery -A celery_app worker --loglevel=info`
+
+### Code Review Checklist
+- [ ] Code follows style guidelines
+- [ ] Proper error handling implemented
+- [ ] Proper logging implemented
+- [ ] Proper testing implemented
+- [ ] Security considerations addressed
+- [ ] Performance considerations addressed
+- [ ] Documentation updated
+
+## Compliance Requirements
+
+### ISO 27001 & SOC 2
+- Comprehensive audit logging
+- Data classification and encryption
+- Access control and authentication
+- Security monitoring and alerting
+- Risk assessment and mitigation
+
+### GDPR Compliance
+- Data subject rights (access, erasure, portability)
+- Consent management
+- Data minimization
+- Privacy controls
+- Breach notification
+
+## Performance Targets
+
+### Backend Performance
+- API response time: < 200ms
+- Database query time: < 50ms
+- Cache hit ratio: > 90%
+- Uptime: > 99.9%
+
+### Frontend Performance
+- First contentful paint: < 1.5s
+- Time to interactive: < 3s
+- Bundle size: < 500KB
+- Lighthouse score: > 90
+
+## Security Standards
+
+### Authentication
+- JWT tokens with proper expiration
+- Multi-factor authentication (MFA)
+- Session management with timeouts
+- Password policies and complexity
+
+### Data Protection
+- Encryption at rest (AES-256)
+- Encryption in transit (TLS 1.3)
+- Data masking for sensitive fields
+- Secure key management
+
+### Access Control
+- Role-based access control (RBAC)
+- Principle of least privilege
+- IP whitelisting for admin access
+- Audit logging for all actions
+
+## Quality Standards
+
+### Code Quality
+- TypeScript strict mode
+- Python type hints
+- Comprehensive test coverage (>80%)
+- Static analysis and linting
+- Code review requirements
+
+### Documentation
+- API documentation with OpenAPI
+- Code documentation with docstrings
+- User documentation and guides
+- Architecture documentation
+
+## Monitoring & Observability
+
+### Backend Monitoring
+- Prometheus metrics collection
+- Distributed tracing with OpenTelemetry
+- Structured logging with correlation IDs
+- Health checks and readiness probes
+
+### Frontend Monitoring
+- Performance monitoring with React Profiler
+- Error tracking with Sentry
+- User analytics and behavior tracking
+- Real-time dashboard metrics
+
+## Business Logic
+
+### AI Agent System
+- Multi-agent orchestration
+- State management and communication
+- Error handling and retry mechanisms
+- Performance monitoring and metrics
+
+### Background Processing
+- Celery task queuing and routing
+- Task monitoring with Flower
+- Error handling and dead letter queues
+- Resource management and scaling
+
+## Future Considerations
+
+### Technology Evolution
+- Monitor technology trends
+- Plan for technology upgrades
+- Plan for feature enhancements
+- Plan for performance improvements
+
+### Business Evolution
+- Monitor business requirements
+- Plan for business growth
+- Plan for new features
+- Plan for market changes
+
+---
